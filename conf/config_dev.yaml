@@ -1,0 +1,52 @@
+session:
+  name: session_id
+  secret_key: abc123
+db:
+  default:
+    type: postgres
+    host: 121.4.202.129
+    port: 5432
+    user: postgres
+    password: 123456
+    dbname: hananoq_blog
+redis:
+  default:
+    addr: 121.4.202.129:6379
+    password:
+    db: 0
+  request:
+    addr: 121.4.202.129:6379
+    password:
+    db: 1
+oauth2:
+  client:
+    - id: test_client_1
+      secret: devil_may_cry_five
+      name: test_app1
+      domain: http://localhost:9696
+      scope:
+        - id: all
+          title: account, smarthome, permission, role etc
+
+release_router:
+  - /auth/login
+  - /auth/token
+  - /auth/noLogout
+  - /auth/register
+  - /article
+  - /music
+  - /friend-address/getFriendAddress
+  - /comment
+  - /category
+
+OSS:
+  endpoint: 'oss-cn-shenzhen.aliyuncs.com'
+  region: 'oss-cn-shenzhen.aliyuncs.com'
+  accessKeyId: 'LTAI5tEcVr2VYvkiydvYEb4z'
+  accessKeySecret: '4uUUCUEbxXAIHbytJ9LXUvEYQMx1rG'
+  bucket: 'hananoq-blog-golang'
+
+sign:
+  app_id: 9dsa79792313
+  nonce: dsafsadjgsdaf
+  secret: da4sf6ds4f6asd4
