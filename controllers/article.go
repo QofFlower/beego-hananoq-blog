@@ -79,3 +79,24 @@ func (c *ArticleController) SearchById() {
 	}
 	c.Resp["data"] = articlesrv.GetById(id)
 }
+
+func (c *ArticleController) Search() {
+	errCode := errcode.SUCCESS
+	defer func() {
+		c.Output(errCode)
+	}()
+	keywords := c.GetString("keywords")
+	pageIndex, err := c.GetInt("currentPage")
+	if err != nil {
+		errCode = errcode.INVALID_PARAM
+		return
+	}
+	pageSize, err := c.GetInt("pageSize")
+	if err != nil {
+		errCode = errcode.INVALID_PARAM
+		return
+	}
+	data := make(map[string]interface{})
+	data["total"], data["list"] = articlesrv.Search(keywords, pageIndex, pageSize)
+	c.Resp["data"] = data
+}

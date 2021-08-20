@@ -87,3 +87,14 @@ func GetById(id int) (article *Article) {
 	}
 	return
 }
+
+func Search(keywords string, pageIndex, pageSize int) (articles []*Article) {
+	keywords = "%" + keywords + "%"
+	sql := `select * from hananoq_blog.blog_article where article_state = 0 and article_name ilike ? limit ? offset ?`
+	o := orm.NewOrm()
+	if _, err := o.Raw(sql, keywords, pageSize, (pageIndex-1)*pageSize).QueryRows(&articles); err != nil {
+		logs.Error(err)
+		return
+	}
+	return
+}

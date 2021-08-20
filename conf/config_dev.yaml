@@ -4,18 +4,18 @@ session:
 db:
   default:
     type: postgres
-    host: 121.4.202.129
+    host: 192.168.127.128
     port: 5432
     user: postgres
     password: 123456
     dbname: hananoq_blog
 redis:
   default:
-    addr: 121.4.202.129:6379
+    addr: 192.168.127.128:6379
     password:
     db: 0
   request:
-    addr: 121.4.202.129:6379
+    addr: 192.168.127.128:6379
     password:
     db: 1
 oauth2:
@@ -27,7 +27,7 @@ oauth2:
       scope:
         - id: all
           title: account, smarthome, permission, role etc
-
+# 放行的路由(包含就放行)
 release_router:
   - /auth/login
   - /auth/token
@@ -40,12 +40,12 @@ release_router:
   - /category
 
 OSS:
-  endpoint: 'oss-cn-shenzhen.aliyuncs.com'
-  region: 'oss-cn-shenzhen.aliyuncs.com'
-  accessKeyId: 'LTAI5tEcVr2VYvkiydvYEb4z'
-  accessKeySecret: '4uUUCUEbxXAIHbytJ9LXUvEYQMx1rG'
-  bucket: 'hananoq-blog-golang'
-
+  endpoint: '<your endpoint>'
+  region: '<your region>'
+  accessKeyId: '<your accessKeyId>'
+  accessKeySecret: '<your accessKeySecret>'
+  bucket: '<your bucket>'
+# 用于签名验证，TODO
 sign:
   app_id: 9dsa79792313
   nonce: dsafsadjgsdaf

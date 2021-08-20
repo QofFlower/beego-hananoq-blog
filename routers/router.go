@@ -21,6 +21,7 @@ func init() {
 			beego.NSRouter("/save", &controllers.ArticleController{}, "POST:Save"),
 			beego.NSRouter("/timeLine", &controllers.ArticleController{}, "GET:TimeLine"),
 			beego.NSRouter("/:id", &controllers.ArticleController{}, "GET:SearchById"),
+			beego.NSRouter("/search", &controllers.ArticleController{}, "GET:Search"),
 		),
 		beego.NSNamespace("friend-address",
 			beego.NSRouter("/getFriendAddress", &controllers.FriendAddressController{}, "GET:GetFriendAddress"),

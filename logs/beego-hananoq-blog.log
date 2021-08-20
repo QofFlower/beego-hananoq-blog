@@ -83,3 +83,12 @@
 2021/08/19 15:42:36.571 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   136.8916ms|   match|[44m GET     [0m /blog/article/2   r:blogarticle/:id
 2021/08/19 15:46:19.737 [D] [server.go:2887]  |            ::1|[42m 200 [0m|    87.5197ms|   match|[44m GET     [0m /blog/article/list   r:blogarticle/list
 2021/08/19 15:46:19.784 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   135.2381ms|   match|[44m GET     [0m /blog/article/2   r:blogarticle/:id
+2021/08/20 10:37:20.758 [I] [asm_amd64.s:1371]  http server Running on http://:9696
+2021/08/20 10:38:33.940 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   136.9908ms|   match|[44m GET     [0m /blog/friend-address/getFriendAddress   r:blogfriend-address/getFriendAddress
+2021/08/20 10:38:33.940 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   136.8201ms|   match|[44m GET     [0m /blog/music/list   r:blogmusic/list
+2021/08/20 10:38:33.949 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   151.1442ms|   match|[44m GET     [0m /blog/article/list   r:blogarticle/list
+2021/08/20 10:38:34.176 [D] [server.go:2887]  |            ::1|[42m 200 [0m|    376.403ms|   match|[44m GET     [0m /blog/article/list   r:blogarticle/list
+2021/08/20 10:38:34.375 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   575.0212ms|   match|[44m GET     [0m /blog/article/searchTag   r:blogarticle/searchTag
+2021/08/20 10:38:53.392 [D] [server.go:2887]  |            ::1|[42m 200 [0m|    88.5792ms|   match|[44m GET     [0m /blog/article/searchTag   r:blogarticle/searchTag
+2021/08/20 10:38:53.400 [D] [server.go:2887]  |            ::1|[42m 200 [0m|    97.1483ms|   match|[44m GET     [0m /blog/article/list   r:blogarticle/list
+2021/08/20 10:38:53.666 [D] [server.go:2887]  |            ::1|[42m 200 [0m|   364.4673ms|   match|[44m GET     [0m /blog/article/search   r:blogarticle/search

@@ -61,3 +61,12 @@ func GetArticleListOrderByCreateTime() []TimeLine {
 func GetById(id int) *models.Article {
 	return models.GetById(id)
 }
+
+func Search(keywords string, pageIndex, pageSize int) (total int, articles []*models.Article) {
+	if strings.Trim(keywords, " ") == "" {
+		return GetArticleList(pageSize, pageIndex)
+	}
+	articles = models.Search(keywords, pageIndex, pageSize)
+	total = len(articles)
+	return
+}
