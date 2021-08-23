@@ -10,6 +10,7 @@ require (
 	github.com/go-redis/redis/v8 v8.4.2
 	github.com/gorilla/sessions v1.2.0 // indirect
 	github.com/lib/pq v1.0.0
+	github.com/nacos-group/nacos-sdk-go v1.0.8
 	github.com/parkingwang/go-sign v1.0.2
 	github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 // indirect
 	github.com/smartystreets/goconvey v1.6.4
